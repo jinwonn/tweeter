@@ -1,0 +1,30 @@
+
+.new-tweet {
+  /* display: flex; */
+  border-style: groove;
+  border-radius: 0.5em;
+  background-color: #ececec;
+  padding: 0.5em
+}
+
+.counter {
+  float: right;
+  margin-top: 0;
+  font-style: italic;
+  font-size: 90%
+}
+
+.new-tweet h2 {
+  margin-top: 0;
+  border-bottom: solid 2px;
+}
+
+#tweet-input {
+  width: 100%;
+  margin-bottom: 0
+}
+
+#tweet-submit {
+  margin-bottom: 5px;
+  margin-left: 5px;
+}

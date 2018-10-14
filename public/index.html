@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -24,7 +25,6 @@
   </head>
 
   <body>
-
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
@@ -38,10 +38,32 @@
             <form id = tweet-composer action="/tweets" method="POST">    
               <textarea id="tweet-input" name="text" placeholder="What are you humming about?"></textarea>
               <input id="tweet-submit" type="submit" value="Tweet">
-              <span class="counter">140</span>
+              <span id="counter">140</span>
             </form>
           </section>
-    </main>
 
+    <article class="tweet">
+        <header>
+            <img src="/images/icon.png"  />
+            <h1>Bill Fields</h1>
+            <h2>@MrFields</h2>
+        </header>
+        <div class="tweet-body">
+          <p>
+            Little tweet here Little tweet here Little tweet here Little tweet here Little tweet here Little tweet here Little tweet here Little tweet here Little tweet here Little tweet here Little tweet here Little tweet here 
+          </p>
+        </div>
+        <footer>
+          <p>
+            10 days ago
+          </p>
+          <span>
+              <i class="fa fa-flag" aria-hidden="false"></i>
+              <i class="fa fa-retweet" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+          </span>
+        </footer>
+      </article>
+    </main>
   </body>
 </html>

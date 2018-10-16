@@ -1,7 +1,6 @@
 .tweet {
   display: flex;
-  border-style: solid;
-  border-color: rgb(180, 180, 180);
+  border: solid rgb(180, 180, 180) 1px;
   border-radius: 0.5em;
   padding: 0;
   flex-direction: column;
@@ -13,7 +12,6 @@
 
 .tweet header {
   height: 70px;
-  /* display: flex; */
   background-color: rgba(26, 26, 26, 0.116);
   border-top-right-radius: 0.5em;
   border-top-left-radius: 0.5em;
@@ -70,9 +68,9 @@
 }
 
 .tweet footer span {
-  /* margin-top: 15px;
-  margin-right: 5px; */
-  color: rgb(0, 0, 0);
+  margin-top: 12px;
+  margin-right: 4px;
+  color: rgb(255, 255, 255);
   float: right;
   font-size: 90%;
 }
@@ -82,9 +80,13 @@
 }
 
 .tweet:hover {
-  border-color: rgb(70, 70, 70);
+  border-color: rgb(87, 87, 87);
 }
 
 .tweet:hover footer span {
-  color: rgb(57, 255, 222);
+  color: rgb(0, 177, 147);
+}
+
+.tweet:hover header h1 {
+  color: rgb(44, 48, 53);
 }

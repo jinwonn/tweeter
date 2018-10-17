@@ -66,6 +66,7 @@ $(document).ready(function() {
 // on tweet submit click
 $("#tweet-submit").on("click", function(event) {
   event.preventDefault();
+  $('.error').empty()
   if ($('textarea').val().length < 140 && $('textarea').val().length > 0) {
     $.ajax({
       url: "/tweets",
@@ -74,7 +75,6 @@ $("#tweet-submit").on("click", function(event) {
     }).then(function() {
       $('.tweet_contain').empty();
       loadTweets();
-      $('.error').empty()
     });
     $('textarea').val('');
   } else if ($('textarea').val().length > 140) {
@@ -110,15 +110,3 @@ $('#nav-bar').click('button', function() {
   }
 });
 });
-
-// $("#tweet-submit").on("click", function(event) {
-//   $.ajax({
-//     url: "/tweets",
-//     method: "POST",
-//     data: $(this).siblings('textarea').serialize(),
-//     success: function() {
-//     }
-//   });
-//   console.log(done)
-//   event.preventDefault();
-// });

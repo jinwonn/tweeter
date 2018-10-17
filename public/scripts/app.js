@@ -74,12 +74,13 @@ $("#tweet-submit").on("click", function(event) {
     }).then(function() {
       $('.tweet_contain').empty();
       loadTweets();
+      $('.error').empty()
     });
     $('textarea').val('');
   } else if ($('textarea').val().length > 140) {
-    alert('exceeded 140 characters')
+    $('.error').append('!!! exceeded 140 characters !!!')
   } else {
-    alert('type a tweet')
+    $('.error').append('!!! Tweet some tweets !!!')
   }
 });
 

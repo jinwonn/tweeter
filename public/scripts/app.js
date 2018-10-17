@@ -64,7 +64,7 @@ $(document).ready(function() {
 
 $("#tweet-submit").on("click", function(event) {
   event.preventDefault();
-  if ($('textarea').val().length < 140) {
+  if ($('textarea').val().length < 140 && $('textarea').val().length > 0) {
     $.ajax({
       url: "/tweets",
       method: 'POST',
@@ -74,9 +74,10 @@ $("#tweet-submit").on("click", function(event) {
       loadTweets();
     });
     $('textarea').val('');
-    $('.counter').text('140');
-  } else {
+  } else if ($('textarea').val().length > 140) {
     alert('exceeded 140 characters')
+  } else {
+    alert('type a tweet')
   }
 });
 

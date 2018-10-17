@@ -96,7 +96,8 @@ function loadTweets(){
 
 loadTweets();
 
-$('#nav-bar').click('button', function() {
+//ajax for showing and hiding tweet composer when button pressed 
+$('.compose').click('button', function() {
   if ($('.new-tweet').is(':animated')) {
     return false;
   }

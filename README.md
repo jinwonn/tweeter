@@ -11,7 +11,18 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
-## Dependencies
+## Final Product
 
-- Express
+!["Main Page of Tweets"](https://github.com/jinwonn/tweeter/blob/master/docs/main_page.png)
+
+## Dependancies
 - Node 5.10.x or above
+- express
+- mongodb
+- body-parser
+- chance
+
+## Getting Started
+
+- Install all dependencies using the 'npm install' command.
+- Run the development web server using 'npm start' command.

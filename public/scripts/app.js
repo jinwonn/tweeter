@@ -62,7 +62,10 @@ function getTime(date) {
 
   //page ready
 $(document).ready(function() {
-
+  //start compose box hidden
+  if ($('.new-tweet').is(":visible")) {
+    $('.new-tweet').hide();
+  }
 // on tweet submit click
 $("#tweet-submit").on("click", function(event) {
   event.preventDefault();

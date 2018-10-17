@@ -50,6 +50,7 @@ function getTime(date) {
     return $output;
   }
 
+  //renders tweets 
   function renderTweets(tweets) {
     let $twts = $("<div>");
     tweets.forEach((tweet) => {
@@ -59,9 +60,10 @@ function getTime(date) {
   }
   
 
+  //page ready
 $(document).ready(function() {
-// renderTweets(data);
 
+// on tweet submit click
 $("#tweet-submit").on("click", function(event) {
   event.preventDefault();
   if ($('textarea').val().length < 140 && $('textarea').val().length > 0) {
@@ -81,6 +83,7 @@ $("#tweet-submit").on("click", function(event) {
   }
 });
 
+//load tweets with ajax
 function loadTweets(){
   $.ajax({
     url: 'http://localhost:8080/tweets',
@@ -92,6 +95,19 @@ function loadTweets(){
 
 loadTweets();
 
+$('#nav-bar').click('button', function() {
+  if ($('.new-tweet').is(':animated')) {
+    return false;
+  }
+  if ($('.new-tweet').is(":visible")) {
+    $('.new-tweet').slideToggle();
+  }
+
+  if ($('.new-tweet').is(":hidden")) {
+    $('.new-tweet').slideToggle();
+    $('textarea').focus();
+  }
+});
 });
 
 // $("#tweet-submit").on("click", function(event) {
